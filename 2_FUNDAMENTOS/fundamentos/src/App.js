@@ -1,5 +1,6 @@
 // componentes
 import FirstComponet from "./componets/FirstComponets"
+import TemplateExpressions from "./componets/templateExpressions";
 
 // styles / css
 import './App.css';
@@ -17,6 +18,7 @@ function App() {
       {/*comentário*/}
       <h1>Fundamentos</h1>
       <FirstComponet></FirstComponet>
+      <TemplateExpressions></TemplateExpressions>
     </div>
   );
 }
