@@ -2,6 +2,7 @@
 import FirstComponet from "./componets/FirstComponets"
 import TemplateExpressions from "./componets/templateExpressions";
 import MyComponets from "./componets/MyComponets";
+import Events from "./componets/Events";
 
 // styles / css
 import './App.css';
@@ -21,6 +22,7 @@ function App() {
       <FirstComponet></FirstComponet>
       <TemplateExpressions></TemplateExpressions>
       <MyComponets></MyComponets>
+      <Events></Events>
     </div>
   );
 }
