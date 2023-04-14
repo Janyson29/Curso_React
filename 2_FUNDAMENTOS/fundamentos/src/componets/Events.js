@@ -9,6 +9,14 @@ const Events = () => {
             <div>
                 <button onClick={handleMyEvent} >Clique aqui</button>
             </div>
+            <div>
+                <button onClick={() => console.log('clicou!')} >clique aqui tbm</button>
+                <button onClick={() => {
+                    if(true) {
+                        console.log('Não deveria existir')
+                    }
+                }} >aqui tbm</button>
+            </div>
         </div>
     )
 }
