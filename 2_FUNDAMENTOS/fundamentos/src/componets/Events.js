@@ -4,6 +4,14 @@ const Events = () => {
         console.log('cliquei');
     }
 
+    const renderSomething = (x) => {
+        if(x) {
+            return <h1>Renderizando isso</h1>
+        } else {
+            return <h1>Também posso renderizar isso</h1>
+        }
+    }
+
     return(
         <div>
             <div>
@@ -13,10 +21,12 @@ const Events = () => {
                 <button onClick={() => console.log('clicou!')} >clique aqui tbm</button>
                 <button onClick={() => {
                     if(true) {
-                        console.log('Não deveria existir')
+                        console.log('  Isso Não deveria existir')
                     }
                 }} >aqui tbm</button>
             </div>
+            {renderSomething(true)}
+            {renderSomething(false)}
         </div>
     )
 }
