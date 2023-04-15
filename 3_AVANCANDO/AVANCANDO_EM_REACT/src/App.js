@@ -1,5 +1,5 @@
 import './App.css';
-import city from "./assets/city.jpg"
+import City from "./assets/city.jpg"
 
 function App() {
   return (
@@ -9,7 +9,10 @@ function App() {
       <div>
         <img src="/img1.jpg" alt="paisagem" />
       </div>
-      <img src={city} alt="dfgdf" />
+      {/* img em assets */}
+      <div>
+      <img src={City} alt="CIDADE" />
+      </div>
     </div>
   );
 }
