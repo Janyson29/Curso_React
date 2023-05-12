@@ -7,6 +7,7 @@ import ManageData from './componets/ManageData';
 import ShowUserName from './componets/ShowUserName';
 import CarDetails from './componets/CarDetails';
 import Fragment from './componets/Fragment';
+import Container from './componets/Container';
 
 function App() {
   const sobrenome = "Marques";
@@ -50,6 +51,15 @@ function App() {
 
       {/* fragment */}
       <Fragment propFrangment="test" />
+
+      {/* children */}
+      <Container myValue="texting">
+        <h2>Esse é o containerfghfghfgh</h2>
+      </Container>
+      <Container myValue="texting 2">
+        <h2>Esse é o containerfghfghfgh</h2>
+        <h5>texting h5</h5>
+      </Container>
     </div>
   );
 }
