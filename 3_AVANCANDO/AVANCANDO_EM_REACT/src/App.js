@@ -6,6 +6,7 @@ import ListRender from './componets/ListRender';
 import ManageData from './componets/ManageData';
 import ShowUserName from './componets/ShowUserName';
 import CarDetails from './componets/CarDetails';
+import Fragment from './componets/Fragment';
 
 function App() {
   const sobrenome = "Marques";
@@ -46,6 +47,9 @@ function App() {
       {cars.map((car) => (
         <CarDetails brand={car.brand} km={car.km} color={car.color}  newCar={car.newCar}/>
       ))}
+
+      {/* fragment */}
+      <Fragment propFrangment="test" />
     </div>
   );
 }
