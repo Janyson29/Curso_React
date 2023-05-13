@@ -8,6 +8,7 @@ import ShowUserName from './componets/ShowUserName';
 import CarDetails from './componets/CarDetails';
 import Fragment from './componets/Fragment';
 import Container from './componets/Container';
+import ExecuteFunction from './componets/ExecuteFunction';
 
 function App() {
   const sobrenome = "Marques";
@@ -18,6 +19,10 @@ function App() {
     { id: 2, brand: "kia", color: "verde", newCar: false, km: 25454 },
     { id: 3, brand: "renault", color: "azul", newCar: false, km: 55454 }
   ];
+
+  function showMessage() {
+    console.log("evento do componente pai")
+  }
 
   return (
     <div className="App">
@@ -46,7 +51,7 @@ function App() {
 
       {/* loop em array de objetos */}
       {cars.map((car) => (
-        <CarDetails brand={car.brand} km={car.km} color={car.color}  newCar={car.newCar}/>
+        <CarDetails key={car.id} brand={car.brand} km={car.km} color={car.color}  newCar={car.newCar}/>
       ))}
 
       {/* fragment */}
@@ -57,9 +62,12 @@ function App() {
         <h2>Esse é o containerfghfghfgh</h2>
       </Container>
       <Container myValue="texting 2">
-        <h2>Esse é o containerfghfghfgh</h2>
+        <h2>Testando container</h2>
         <h5>texting h5</h5>
       </Container>
+
+      {/* executar função */}
+      <ExecuteFunction myFunction={showMessage} />
     </div>
   );
 }
