@@ -1,0 +1,9 @@
+p {
+  color: green;
+  background: #000;
+}
+
+.esse-paragrafo-e-do-component{
+  color: #000;
+  background-color: gold;
+}
