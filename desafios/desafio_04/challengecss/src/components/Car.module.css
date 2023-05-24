@@ -1,0 +1,8 @@
+.card {
+  border: 2px solid brown;
+  padding: 10px 50px;
+  border-radius: 10px;
+  margin: 10px;
+  display: grid;
+  gap: 10px;
+}
