@@ -48,7 +48,9 @@
   text-transform: uppercase;
 }
 
-
+.wrongLetter {
+  text-transform: uppercase;
+}
 
 
 

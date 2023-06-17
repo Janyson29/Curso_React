@@ -23,6 +23,8 @@ const Game = (
         letterInputRef.current.focus()
       }
 
+
+      // A Á Á A �
   return (
     <div className="game">
       <p className="points">
