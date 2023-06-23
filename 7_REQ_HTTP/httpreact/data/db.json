@@ -2,18 +2,28 @@
   "products": [
     {
       "id": 1,
-      "name": "Product 1",
+      "name": "Camisa ",
       "price": 100
     },
     {
       "id": 2,
-      "name": "Product 2",
+      "name": "Calça ",
       "price": 200
     },
     {
       "id": 3,
-      "name": "Product 3",
+      "name": "Boné ",
       "price": 300
+    },
+    {
+      "name": "Relógio",
+      "price": "200",
+      "id": 4
+    },
+    {
+      "name": "Capa de chuva",
+      "price": "50.50",
+      "id": 5
     }
-  ] 
+  ]
 }
