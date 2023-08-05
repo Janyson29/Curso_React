@@ -39,6 +39,16 @@
       "name": "Mouse",
       "price": "60",
       "id": 8
+    },
+    {
+      "name": "Suporte monitor",
+      "price": "120",
+      "id": 9
+    },
+    {
+      "name": "cabo hdmi",
+      "price": "10",
+      "id": 10
     }
   ]
 }

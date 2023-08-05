@@ -9,7 +9,7 @@ import { useFetch } from './hooks/useFetch';
 function App() {
   const [products, setProducts] = useState([]);
 
-  const {data: items, httpConfig } = useFetch("http://localhost:3001/products");
+  const {data: items, httpConfig, loading } = useFetch("http://localhost:3001/products");
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
 
@@ -60,17 +60,19 @@ function App() {
   return (
     <div className="App">
       <h1>Lista de produtos</h1>
-
-      <ul>
+      {/* 6- loading */}
+      {loading && <p>Carregando dados...</p>}
+      {!loading && (
+        <ul>
         {items && items.map((product) => (  
           <li key={product.id}>
             {product.name} 
              -  R$: 
             {product.price}
           </li>
-
         ))}
-      </ul>
+        </ul>
+      )}
       <div className="add-product">
         <form onSubmit={handleSubmit}>
           <label>
