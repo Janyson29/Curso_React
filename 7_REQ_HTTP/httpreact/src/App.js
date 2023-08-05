@@ -9,7 +9,7 @@ import { useFetch } from './hooks/useFetch';
 function App() {
   const [products, setProducts] = useState([]);
 
-  const {data: items } = useFetch("http://localhost:3001/products");
+  const {data: items, httpConfig } = useFetch("http://localhost:3001/products");
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
 
@@ -37,17 +37,20 @@ function App() {
       price
     };
 
-    const res = await fetch("http://localhost:3001/products", {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(product),
-    });
-    // 3 - carregamento dinamico
-    const addedProduct = await res.json();
+    // const res = await fetch("http://localhost:3001/products", {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   },
+    //   body: JSON.stringify(product),
+    // });
+    // // 3 - carregamento dinamico
+    // const addedProduct = await res.json();
 
-    setProducts((prevProducts) => [...prevProducts, addedProduct]);
+    // setProducts((prevProducts) => [...prevProducts, addedProduct]);
+
+    // 5- Refatorando o post
+    httpConfig(product, 'POST');
 
     setName('');
     setPrice('');
