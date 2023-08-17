@@ -4,7 +4,9 @@ const Product = () => {
   // 4- rota dinamica
   const {id} = useParams()
   return (
-    <div>Product</div>
+    <div>
+      <p>ID do produto: {id}</p>
+    </div>
   )
 }
 
