@@ -9,7 +9,7 @@ import { useFetch } from './hooks/useFetch';
 function App() {
   const [products, setProducts] = useState([]);
 
-  const {data: items, httpConfig, loading } = useFetch("http://localhost:3001/products");
+  const {data: items, httpConfig, loading, error } = useFetch("http://localhost:3001/products");
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
 
@@ -62,6 +62,7 @@ function App() {
       <h1>Lista de produtos</h1>
       {/* 6- loading */}
       {loading && <p>Carregando dados...</p>}
+      {error && <p>{error}</p> }
       {!loading && (
         <ul>
         {items && items.map((product) => (  
